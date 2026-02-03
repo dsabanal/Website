@@ -180,25 +180,26 @@ const Portfolio: React.FC = () => {
   const [view, setView] = useState<ViewType>('home');
   
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 overflow-x-hidden">
+    <div className="min-h-screen w-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 overflow-x-hidden">
       {/* Decorative Background Elements */}
-    <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none">
-      <div
-        className="absolute top-0 right-0 rounded-full blur-3xl animate-pulse bg-emerald-300/20 dark:bg-emerald-500/10"
-        style={{
-          width: 'clamp(300px, 50vw, 700px)',
-          height: 'clamp(300px, 50vw, 700px)',
-        }}
-      ></div>
-    
-      <div
-        className="absolute bottom-0 left-0 rounded-full blur-3xl animate-pulse bg-teal-300/20 dark:bg-teal-500/10"
-        style={{
-          width: 'clamp(300px, 50vw, 700px)',
-          height: 'clamp(300px, 50vw, 700px)',
-          animationDelay: '1s',
-        }}
-      ></div>
+      <div className="fixed inset-0 w-screen h-screen overflow-hidden pointer-events-none">
+        <div
+          className="absolute top-0 right-0 rounded-full blur-3xl animate-pulse bg-emerald-300/20 dark:bg-emerald-500/10"
+          style={{
+            width: 'clamp(300px, 50vw, 700px)',
+            height: 'clamp(300px, 50vw, 700px)',
+          }}
+        />
+      
+        <div
+          className="absolute bottom-0 left-0 rounded-full blur-3xl animate-pulse bg-teal-300/20 dark:bg-teal-500/10"
+          style={{
+            width: 'clamp(300px, 50vw, 700px)',
+            height: 'clamp(300px, 50vw, 700px)',
+            animationDelay: '1s',
+          }}
+        />
+      </div>
     </div>
       
       {/* Header / Navigation */}
@@ -331,6 +332,16 @@ const Portfolio: React.FC = () => {
           animation-delay: 0.2s;
           opacity: 0;
           animation-fill-mode: forwards;
+        }
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translate3d(30px, 0, 0);
+          }
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
         }
       `}</style>
     </div>
