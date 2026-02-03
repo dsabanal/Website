@@ -184,13 +184,9 @@ const Portfolio: React.FC = () => {
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-300/20 dark:bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
-
-      <div
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-300/20 dark:bg-teal-500/10 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: '1s' }}
-      ></div>
-
-
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-300/20 dark:bg-teal-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+      
       {/* Header / Navigation */}
       <header className="relative z-10 p-6 md:p-8">
         <nav className="flex justify-end gap-3">
