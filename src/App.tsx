@@ -200,7 +200,6 @@ const Portfolio: React.FC = () => {
           }}
         />
       </div>
-    </div>
       
       {/* Header / Navigation */}
       <header className="relative z-10 p-6 md:p-8">
