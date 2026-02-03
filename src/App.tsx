@@ -101,7 +101,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ onClose }) => {
             </div>
             <div>
               <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Phone</p>
-              <p className="text-lg text-slate-900 dark:text-white font-semibold">09816223351</p>
+              <p className="text-lg text-slate-900 dark:text-white font-semibold">09153322618</p>
             </div>
           </div>
           
