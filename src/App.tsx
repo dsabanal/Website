@@ -191,13 +191,6 @@ const Portfolio: React.FC = () => {
       <header className="relative z-10 p-6 md:p-8">
         <nav className="flex justify-end gap-3">
           <Button 
-            variant="ghost" 
-            onClick={() => setView('home')}
-            icon={Home}
-          >
-            Home
-          </Button>
-          <Button 
             variant="secondary" 
             onClick={() => setView('contact')}
             icon={Mail}
@@ -206,7 +199,7 @@ const Portfolio: React.FC = () => {
           </Button>
         </nav>
       </header>
-      
+
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 xl:gap-32 items-center max-w-[1600px] mx-auto">
