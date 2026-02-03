@@ -75,50 +75,47 @@ const Card: React.FC<CardProps> = ({ children, className = '' }) => {
 const ContactInfo: React.FC<ContactInfoProps> = ({ onClose }) => {
   return (
     <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn"
-      onClick={onClose} // 👈 click background to close
-    >
-      <div onClick={(e) => e.stopPropagation()}>
-        <Card className="max-w-md w-full relative animate-slideUp">
-          <button 
-            onClick={onClose}
-            className="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn"
+          onClick={onClose}
+        >
+          <Card
+            className="max-w-md w-full relative animate-slideUp"
+            onClick={(e) => e.stopPropagation()}
           >
-            <X className="w-6 h-6" />
-          </button>
 
-          <h2
-            className="text-3xl font-bold text-slate-900 dark:text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Get in Touch
-          </h2>
-
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-xl">
-                <Phone className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-              </div>
-              <div>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Phone</p>
-                <p className="text-lg font-semibold">09816223351</p>
-              </div>
+        <button 
+          onClick={onClose}
+          className="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+        >
+          <X className="w-6 h-6" />
+        </button>
+        
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          Get in Touch
+        </h2>
+        
+        <div className="space-y-6">
+          <div className="flex items-start gap-4 group cursor-pointer hover:translate-x-2 transition-transform">
+            <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-xl group-hover:scale-110 transition-transform">
+              <Phone className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-xl">
-                <Mail className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-              </div>
-              <div>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-                <p className="text-lg font-semibold break-all">
-                  dsabanal@gmail.com
-                </p>
-              </div>
+            <div>
+              <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Phone</p>
+              <p className="text-lg text-slate-900 dark:text-white font-semibold">09816223351</p>
             </div>
           </div>
-        </Card>
-      </div>
+          
+          <div className="flex items-start gap-4 group cursor-pointer hover:translate-x-2 transition-transform">
+            <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-xl group-hover:scale-110 transition-transform">
+              <Mail className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+            </div>
+            <div>
+              <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Email</p>
+              <p className="text-lg text-slate-900 dark:text-white font-semibold break-all">dsabanal@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 };
@@ -128,13 +125,13 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ onClose }) => {
   return (
     <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 overflow-y-auto p-4 animate-fadeIn"
-      onClick={onClose} // 👈 background click closes
+      onClick={onClose}
     >
-      <div
-        className="min-h-screen flex items-center justify-center py-8"
-        onClick={(e) => e.stopPropagation()} // 👈 card area safe
-      >
-        <Card className="max-w-4xl w-full relative animate-slideUp">
+      <div className="min-h-screen flex items-center justify-center py-8">
+        <Card
+          className="max-w-4xl w-full relative animate-slideUp"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button 
             onClick={onClose}
             className="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors z-10"
