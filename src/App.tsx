@@ -183,10 +183,23 @@ const Portfolio: React.FC = () => {
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 overflow-x-hidden">
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-300/20 dark:bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-300/20 dark:bg-teal-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-      
+        <div
+          className="absolute top-0 right-0 rounded-full blur-3xl animate-pulse bg-emerald-300/20 dark:bg-emerald-500/10"
+          style={{
+            width: 'clamp(300px, 50vw, 700px)',
+            height: 'clamp(300px, 50vw, 700px)',
+          }}
+        ></div>
+        
+        <div
+          className="absolute bottom-0 left-0 rounded-full blur-3xl animate-pulse bg-teal-300/20 dark:bg-teal-500/10"
+          style={{
+            width: 'clamp(300px, 50vw, 700px)',
+            height: 'clamp(300px, 50vw, 700px)',
+            animationDelay: '1s',
+          }}
+        ></div>
+
       {/* Header / Navigation */}
       <header className="relative z-10 p-6 md:p-8">
         <nav className="flex justify-end gap-3">
